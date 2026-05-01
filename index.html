@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Makes site responsive on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Movie Search App</title>
+
+  <!-- Connect CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="app">
+
+    <!-- Search section -->
+    <section class="hero">
+      <h1>Movie Search</h1>
+      <p>Search movies using the OMDB API</p>
+
+      <div class="search-box">
+        <!-- Input for movie name -->
+        <input id="movieInput" type="text" placeholder="Enter movie name..." />
+
+        <!-- Button triggers search -->
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <!-- Used for errors / loading messages -->
+      <p id="message"></p>
+    </section>
+
+    <!-- Movie result will be inserted here dynamically by JS -->
+    <!-- hidden class makes it invisible initially -->
+    <section id="movieResult" class="movie-card hidden"></section>
+
+  </main>
+
+  <!-- Connect JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

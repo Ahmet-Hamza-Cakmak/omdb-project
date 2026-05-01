@@ -1,0 +1,154 @@
+/* Reset default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page base styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  min-height: 100vh;
+}
+
+/* Main container */
+.app {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto; /* center horizontally */
+  padding: 40px 0;
+}
+
+/* Top section (title + search) */
+.hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+/* Input + button layout */
+.search-box {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap; /* stack on small screens */
+}
+
+/* Input styling */
+.search-box input {
+  width: 300px;
+  max-width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+/* Button styling */
+.search-box button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 10px;
+  background: #38bdf8;
+  color: #020617;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hover effect */
+.search-box button:hover {
+  background: #0ea5e9;
+}
+
+/* Message (errors / loading) */
+#message {
+  margin-top: 20px;
+  color: #f87171;
+  font-weight: bold;
+}
+
+/* Movie result card */
+.movie-card {
+  display: flex;
+  gap: 25px;
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Poster image inside movie card */
+.movie-card img {
+  width: 260px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Right side info */
+.movie-info {
+  flex: 1;
+}
+
+.movie-info h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.movie-info p {
+  margin-bottom: 10px;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+/* Labels like "Year:" */
+.movie-info strong {
+  color: white;
+}
+
+/* Used to hide elements */
+.hidden {
+  display: none;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 700px) {
+  .movie-card {
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .movie-card img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}
